@@ -19,6 +19,11 @@
 }
 
 :root {
+  /* Шрифты */
+  --primary-font-size: 16px;
+  --primary-word-space: 1px;
+
+  /* Цвета */
   --dark-blue: #0c56c5;
   --light-blue: #73abff;
   --extra-light-blue: #b3cff9;
@@ -33,13 +38,20 @@
     var(--light-blue),
     var(--extra-light-blue)
   );
+
+  /* Ширина контейнера */
+  --container-max-width: 1680px;
 }
 
 body * {
   font-family: "Noah", sans-serif;
-  font-size: 16px;
+  font-size: var(--primary-font-size);
   font-weight: 400;
   color: var(--text-color);
+}
+
+.main {
+  position: relative;
 }
 
 .container {
@@ -47,42 +59,113 @@ body * {
   margin: 0 auto;
   padding: 0 15px;
   height: 100%;
-  max-width: 1200px;
+  max-width: var(--container-max-width);
 }
 
 .header {
+  position: relative;
   color: greenyellow;
   height: 100px;
 }
 
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.connect-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+}
+
+.link__tel {
+  font-size: 20px;
+}
+.link__mail {
+  font-size: 20px;
+  margin-left: 48px;
+}
+
+.link-wrapper {
+  white-space: nowrap;
+  margin-right: 11%;
+}
+
+.social-wrapper {
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+.social__item {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+.social__whatsapp {
+  background: url("../assets/images/header/social/whatsapp-blue.svg") no-repeat
+    100% 100% / contain;
+}
+.social__telegram {
+  margin-left: 15px;
+  background: url("../assets/images/header/social/telegram-blue.svg") no-repeat
+    100% 100% / contain;
+}
+
+.button-order {
+  display: inline-block;
+  font-size: 26px;
+  color: #fff;
+  padding: 15px 60px;
+  border-radius: 27px;
+  background-color: var(--dark-blue);
+  margin-right: 15px;
+}
+
+.offer {
+  height: 733px;
+}
+
 .offer__image-wrapper {
   position: relative;
-  width: 450px;
-  /* height: 450px; */
+  top: 105px;
+  display: flex;
+  width: 100%;
   aspect-ratio: 1/1;
+  margin-left: auto;
 }
 
 .offer__image {
   position: absolute;
-  display: block;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
-  height: 100%;
 }
 
 .offer-image__circle {
-  background: url("../assets/images/sofa-bubble-offer-circle.svg") no-repeat
-    100% 100% / contain;
+  max-width: 630px;
+  max-height: 630px;
+  aspect-ratio: 1/1;
+  background: url("../assets/images/main/sofa-bubble-offer-circle.svg")
+    no-repeat 100% 100% / contain;
 }
 
 .offer-image__sofa {
-  left: -15%;
-  background: url("../assets/images/sofa-bubble-offer.png") no-repeat 100% 100% /
-    contain;
+  top: -4%;
+  right: 6%;
+  max-width: 770px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 
 .offer__text {
-  font-size: 50px;
+  position: absolute;
+  top: 28%;
+  left: 15px;
+  font-size: 67px;
   font-weight: 700;
+  word-spacing: -8px;
+  line-height: 1.1;
 }
