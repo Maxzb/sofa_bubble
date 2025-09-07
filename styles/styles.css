@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Noah";
+  src: url("../assets/fonts/noah-regular.woff2") format("woff2"),
+    url("../assets/fonts/noah-regular.woff") format("woff"),
+    url("../assets/fonts/noah-regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noah";
+  src: url("../assets/fonts/noah-bold.woff2") format("woff2"),
+    url("../assets/fonts/noah-bold.woff") format("woff"),
+    url("../assets/fonts/noah-bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --dark-blue: #0c56c5;
+  --light-blue: #73abff;
+  --extra-light-blue: #b3cff9;
+
+  --text-color: #000;
+
+  --primary-hover: #2980b9;
+
+  --main-gradient: linear-gradient(135deg, var(--dark-blue), var(--light-blue));
+  --light-gradient: linear-gradient(
+    135deg,
+    var(--light-blue),
+    var(--extra-light-blue)
+  );
+}
+
+body * {
+  font-family: "Noah", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+  max-width: 1200px;
+}
+
+.header {
+  color: greenyellow;
+  height: 100px;
+}
+
+.offer__image-wrapper {
+  width: 450px;
+  height: 450px;
+  position: relative;
+}
+
+.offer__image {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.offer-image__circle {
+  background: url("../assets/images/sofa-bubble-offer-circle.svg") no-repeat
+    100% 100% / contain;
+}
+
+.offer-image__sofa {
+  left: -15%;
+  background: url("../assets/images/sofa-bubble-offer.png") no-repeat 100% 100% /
+    contain;
+}
+
+.offer__text {
+  font-size: 50px;
+  font-weight: 700;
+}
