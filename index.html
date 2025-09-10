@@ -1,58 +1,368 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Русметалл - прием металлолома в москве и московской области"
-    />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Bubble</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header__container">
-        <div class="logo-wrapper">
-          <image
-            src="./assets/images/header/sofa-bubble-logo.svg"
-            class="logo"
-          />
-        </div>
+<html lang="ru">
 
-        <div class="connect-wrapper">
-          <div class="link-wrapper link">
-            <a href="#tel" class="link__tel">8-800-999-99-99</a>
-            <a href="#mail" class="link__mail">test@test.ru</a>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Русметалл - прием металлолома в москве и московской области">
+  <meta name="keywords" content="">
 
-          <div class="social-wrapper social">
-            <a href="#whatsap" class="social__item social__whatsapp"></a>
-            <a href="#telegram" class="social__item social__telegram"></a>
-          </div>
+  <link rel="stylesheet" href="./styles/swiper.css">
 
-          <a rel="stylesheet" href="#" class="button-order">Заказать</a>
-        </div>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+
+  <title>Bubble</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo-wrapper">
+        <img src="./assets/images/header/sofa-bubble-logo.svg" class="logo" alt="Логотип компании sofa bubble">
       </div>
-    </header>
 
-    <main class="main">
-      <div class="container offer">
-        <div class="offer__image-wrapper">
-          <div class="offer__image offer-image__circle"></div>
-          <image
-            src="./assets/images/main/sofa-bubble-offer.png"
-            class="offer__image offer-image__sofa"
-          />
+      <div class="connect-wrapper">
+        <div class="link-wrapper link">
+          <a href="#tel" class="link__tel">8-800-999-99-99</a>
+          <a href="#mail" class="link__mail">test@test.ru</a>
         </div>
+
+        <div class="social-wrapper social">
+          <a href="#whatsap" class="social__item social__whatsapp"></a>
+          <a href="#telegram" class="social__item social__telegram"></a>
+        </div>
+
+        <a rel="stylesheet" href="#button_header" class="button-order">
+          Заказать
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container offer">
+      <div class="offer__image-wrapper">
+        <div class="offer__image offer-image__circle"></div>
+        <img src="./assets/images/offer/sofa-bubble-offer.png" class="offer__image offer-image__sofa"
+          alt="Диван Bubble">
+      </div>
+
+      <div class="offer__text-wrapper">
         <h1 class="offer__text">
-          Интегрируйте роскошь и эстетику<br />
+          Интегрируйте роскошь и эстетику
+          <br>
           в домашнюю жизнь выгодно
         </h1>
+        <a rel="stylesheet" href="#button_offer" class="button-order offer__button-order">
+          Заказать
+        </a>
       </div>
-    </main>
-    <footer class="footer"></footer>
-  </body>
+    </div>
+
+    <div class="container product">
+      <div class="product__item">
+        <div class="product__wrapper">
+          <div class="product__image">
+            <div class="swiper mySwiper2 swiper-custom-1-2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/1/img-main-1.png" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/1/img-extra-1.png" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/1/img-extra-2.png" alt="Диван Bubble">
+                </div>
+              </div>
+            </div>
+
+            <div thumbsSlider="" class="swiper mySwiper swiper-custom-1-1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/1/img-main-1.png" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/1/img-extra-1.png" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/1/img-extra-2.png" alt="Диван Bubble">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__info">
+            <div class="product__title">Диван 3-х местный</div>
+            <p class="product__text">Дизайнерский минималистичный секционный диван Bubble, воплощение идеи
+              итальянского дизайнера Rodolfo Dordoni, изготовлен из высококачественного латекса, обладающего высокой
+              эластичностью, эргономичностью,
+              прочностью, не деформируется и не теряет форму, что значительно продлевает срок эксплуатации.
+              Высокопрочная сетчатая ткань обивки придает изящный стиль и оригинальность. Также представлены другие
+              варианты обивки
+              на выбор: ткань, велюр, микрофибра.</p>
+            <div class="div product__props props">
+              <span class="props__header">Характеристики</span>
+              <div class="props__item">
+                <span class="props__item-title">Размер:</span>250x108x80cm
+              </div>
+
+              <div class="props__item">
+                <span class="props__item-title">Материал:</span>на выбор
+              </div>
+
+              <a rel="stylesheet" href="#button_product" class="button-order product__button-order">
+                Заказать
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="product__advantages advantages">
+          <div class="advantages__item">
+            <span class="advantages__item-title">Практичность и<br>функциональность</span>
+            <span class="advantages__item-text">Не требует дополнительной сборки, так как не имеет жесткой
+              основы</span>
+            <span class="advantages__icon advantages__icon--1 advantages__icon--1-1"></span>
+          </div>
+
+          <div class="advantages__item">
+            <span class="advantages__item-title">Безопасность</span>
+            <span class="advantages__item-text">Отсутствие острых углов и твердых деталей, что особенно важно для
+              детских
+              комнат</span>
+            <span class="advantages__icon advantages__icon--2 advantages__icon--1-2"></span>
+          </div>
+
+          <div class="advantages__item">
+            <span class="advantages__item-title">Комфорт</span>
+            <span class="advantages__item-text">Благодаря наполнителю мебель максимально позволит расслабиться и
+              отдохнуть</span>
+            <span class="advantages__icon advantages__icon--3 advantages__icon--1-3"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product__item">
+        <div class="product__wrapper">
+          <div class="product__info product__info--left">
+            <div class="product__title">Диван 2-х местный</div>
+            <p class="product__text">Дизайнерский минималистичный секционный диван Bubble, воплощение идеи итальянского
+              дизайнера Rodolfo Dordoni, изготовлен из высококачественного латекса, обладающего высокой эластичностью,
+              эргономичностью, прочностью, не деформируется и не теряет форму, что значительно продлевает срок
+              эксплуатации. Высокопрочная сетчатая ткань обивки придает изящный стиль и оригинальность. Также
+              представлены другие варианты обивки на выбор: ткань, велюр, микрофибра.</p>
+            <div class="div product__props props">
+              <span class="props__header">Характеристики</span>
+              <div class="props__item">
+                <span class="props__item-title">Размер:</span>203x108x80cm
+              </div>
+
+              <div class="props__item">
+                <span class="props__item-title">Материал:</span>на выбор
+              </div>
+
+              <a rel="stylesheet" href="#button_product" class="button-order product__button-order">
+                Заказать
+              </a>
+            </div>
+          </div>
+
+          <div class="product__image product__image--right">
+            <div class="swiper mySwiper2 swiper-custom-2-2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/2/img-main-1.jpg" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/2/img-extra-1.jpg" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/2/img-extra-2.jpg" alt="Диван Bubble">
+                </div>
+              </div>
+            </div>
+
+            <div thumbsSlider="" class="swiper mySwiper swiper-custom-2-1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/2/img-main-1.jpg" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/2/img-extra-1.jpg" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/2/img-extra-2.jpg" alt="Диван Bubble">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__advantages advantages advantages--left">
+          <div class="advantages__item">
+            <span class="advantages__item-title">Бесшумность</span>
+            <span class="advantages__item-text">Мебель не скрипит, имеет мягкий наполнитель, нет пружин и жесткого
+              каркаса</span>
+            <span class="advantages__icon advantages__icon--1 advantages__icon--2-3"></span>
+          </div>
+
+          <div class="advantages__item">
+            <span class="advantages__item-title">Долговечность</span>
+            <span class="advantages__item-text">При правильной эксплуатации мебель прослужит 10 и более лет</span>
+            <span class="advantages__icon advantages__icon--2 advantages__icon--2-2"></span>
+          </div>
+
+          <div class="advantages__item">
+            <span class="advantages__item-title">Комфорт</span>
+            <span class="advantages__item-text">Благодаря наполнителю мебель максимально позволит расслабиться и
+              отдохнуть</span>
+            <span class="advantages__icon advantages__icon--3 advantages__icon--2-1"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product__item">
+        <div class="product__wrapper">
+          <div class="product__image">
+            <div class="swiper mySwiper2 swiper-custom-3-2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/3/img-main-1.jpg" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/3/img-extra-1.jpg" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/3/img-extra-2.jpg" alt="Диван Bubble">
+                </div>
+              </div>
+            </div>
+
+            <div thumbsSlider="" class="swiper mySwiper swiper-custom-3-1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/3/img-main-1.jpg" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/3/img-extra-1.jpg" alt="Диван Bubble">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/products/3/img-extra-2.jpg" alt="Диван Bubble">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__info">
+            <div class="product__title">Дизайнерское кресло Serie Up Mix</div>
+            <p class="product__text">Дизайнерский минималистичный секционный диван Bubble, воплощение идеи итальянского
+              дизайнера Rodolfo Dordoni, изготовлен из высококачественного латекса, обладающего высокой эластичностью,
+              эргономичностью, прочностью, не деформируется и не теряет форму, что значительно продлевает срок
+              эксплуатации. Высокопрочная сетчатая ткань обивки придает изящный стиль и оригинальность. Также
+              представлены другие варианты обивки на выбор: ткань, велюр, микрофибра.</p>
+            <div class="div product__props props">
+              <span class="props__header">Характеристики</span>
+              <div class="props__item">
+                <span class="props__item-title">Размер:</span>131x108x80cm
+              </div>
+
+              <div class="props__item">
+                <span class="props__item-title">Материал:</span>на выбор
+              </div>
+
+              <a rel="stylesheet" href="#button_product" class="button-order product__button-order">
+                Заказать
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="product__advantages advantages">
+          <div class="advantages__item">
+            <span class="advantages__item-title">Практичность и<br>функциональность</span>
+            <span class="advantages__item-text">Не требует дополнительной сборки, так как не имеет жесткой
+              основы</span>
+            <span class="advantages__icon advantages__icon--1 advantages__icon--3-1"></span>
+          </div>
+
+          <div class="advantages__item">
+            <span class="advantages__item-title">Долговечность</span>
+            <span class="advantages__item-text">При правильной эксплуатации мебель прослужит 10 и более лет</span>
+            <span class="advantages__icon advantages__icon--2 advantages__icon--3-2"></span>
+          </div>
+
+          <div class="advantages__item">
+            <span class="advantages__item-title">Бесшумность</span>
+            <span class="advantages__item-text">Мебель не скрипит, имеет мягкий наполнитель, нет пружин и жесткого
+              каркаса</span>
+            <span class="advantages__icon advantages__icon--3 advantages__icon--3-3"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="advantages-scheme">
+        <h2 class="advantages-scheme__title">
+          Преимущества современной бескаркасной мебели
+        </h2>
+
+        <div class="advantages-scheme__image-wrapper">
+          <img src="./assets/images/advantages-scheme/sofa-bubble.png" class="advantages-scheme__image"
+            alt="Преимущества диванов Bubble">
+
+          <div class="advantages-scheme__icon advantages-scheme__icon--1">
+            <p class="advantages-scheme__icon-text">Нет жесткого каркаса</p>
+          </div>
+          <div class="advantages-scheme__icon advantages-scheme__icon--2">
+            <p class="advantages-scheme__icon-text">Гипоаллергенный материал</p>
+
+          </div>
+          <div class="advantages-scheme__icon advantages-scheme__icon--3">
+            <p class="advantages-scheme__icon-text">Износостойкая ткань</p>
+
+          </div>
+          <div class="advantages-scheme__icon advantages-scheme__icon--4">
+            <p class="advantages-scheme__icon-text">Подходит для детской комнаты</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="about about__wrapper">
+        <div class="about__image-wrapper">
+          <div class="about__image about-image__circle"></div>
+          <img src="./assets/images/offer/sofa-bubble-offer.webp" class="about__image about-image__sofa"
+            alt="диван bubble">
+        </div>
+
+        <div class="about__info-wrapper about-info">
+          <h2 class="about-info__title">Компания Bubble-sofa</h2>
+          <div class="about-info__text">
+            <p>Имеет многолетний опыт в сотрудничестве с мебельными фабриками и лучшими производителями Европы и Азии.
+              Мы
+              не только отбираем лучшие базовые модели, но также разрабатываем собственные дизайны, тщательно следим и
+              контролируем качество на всех этапах производства.</p>
+
+            <p>Выйти на баланс "цена-качество" - главная цель компании.
+              Мы уделяем большое внимание выбору фабрик, подбору материала обивки, качественной фурнитуры, а также
+              надёжной и максимально быстрой доставке на наши склады в Москве.</p>
+
+            <p>Бескаркасные диваны, кресла и пуфы
+              стремительно набирают популярность у самых искушённых покупателей. Мебель отличается высоким комфортом и
+              отвечает современным тенденциям, а внешний вид и стиль говорит сам за себя.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="footer"></footer>
+
+
+
+  <script src="./js/swiper.js"></script>
+  <script src="./js/script.js"></script>
+
+</body>
+
 </html>
