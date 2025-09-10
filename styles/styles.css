@@ -63,12 +63,20 @@ body * {
   /* border: 1px solid lightgray; */
 }
 
-.header {
+.header,
+.footer {
   position: relative;
-  color: greenyellow;
   height: 70px;
 }
-.header__container {
+.footer {
+  margin-top: 20px;
+  height: 85px;
+}
+.footer__wrapper {
+  background-color: #000;
+}
+.header__container,
+.footer__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -89,6 +97,10 @@ body * {
 .link__mail {
   font-size: var(----primary-font-size);
   margin-left: 25px;
+}
+.link__tel--white,
+.link__mail--white {
+  color: #fff;
 }
 
 .link-wrapper {
@@ -122,7 +134,6 @@ body * {
   padding: 10px 45px;
   border-radius: 27px;
   background-color: var(--dark-blue);
-  margin-right: 15px;
   width: fit-content;
 }
 
@@ -132,10 +143,14 @@ body * {
 .offer__image-wrapper,
 .about__image-wrapper {
   position: relative;
-  top: 80px;
   display: flex;
   width: 100%;
   aspect-ratio: 1/1;
+}
+.offer__image-wrapper {
+  max-width: 600px;
+  top: 13%;
+  right: 0;
   margin-left: auto;
 }
 .offer__image,
@@ -155,11 +170,18 @@ body * {
 }
 .offer-image__sofa,
 .about-image__sofa {
-  top: -5%;
-  right: 7%;
+  right: 14%;
   max-width: 540px;
   aspect-ratio: 1/1;
   object-fit: contain;
+}
+.offer-image__sofa {
+  top: -9%;
+}
+.about-image__sofa {
+  top: -15%;
+  right: 9%;
+  max-width: 390px;
 }
 
 .offer__text-wrapper {
@@ -402,29 +424,46 @@ body * {
 
 .about {
   display: flex;
-  align-items: center;
+  align-items: start;
+  margin-top: 125px;
 }
 .about__image-wrapper {
   transform: scaleX(-1);
-  top: 125px;
+  max-height: 350px;
 }
 .about-image__circle {
   width: 300px;
   aspect-ratio: 1/1;
 }
-.about-image__sofa {
-  top: -9%;
-  right: 9%;
-  max-width: 390px;
-}
 .about-info {
   flex: 1 0 52%;
   align-self: start;
-  padding-top: 140px;
   font-weight: 700;
   font-size: 31px;
   margin-bottom: 20px;
 }
+.about-info__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
 .about-info__text p {
   margin-bottom: 23px;
+}
+
+.connect-footer {
+  margin-left: 8%;
+  justify-content: space-between;
+}
+.link__footer {
+  margin-right: 0;
+}
+.link__tel--big,
+.link__mail--big {
+  font-size: 28px;
+}
+
+.rights {
+  font-size: 12px;
+  color: #fff;
 }
