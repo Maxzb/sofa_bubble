@@ -16,8 +16,30 @@
 </head>
 
 <body>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="logo-wrapper logo-wrapper__mob-menu">
+      <img src="./assets/images/header/sofa-bubble-logo.svg" class="logo" alt="Логотип компании sofa bubble">
+    </div>
+
+    <div class="link-wrapper link__mob-menu">
+      <a href="#tel" class="link__tel link__tel__mob-menu">8-800-999-99-99</a>
+      <a href="#mail" class="link__mail link__mail__mob-menu">test@test.ru</a>
+    </div>
+
+    <a href="#politika" class="politika politika__mob-menu">Политика конфиденциальности</a>
+    <span class="rights rights__mob-menu">© Все права защищены</span>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
   <header class="header">
     <div class="container header__container">
+      <button class="burger-btn" id="burgerBtn">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+
       <div class="logo-wrapper">
         <img src="./assets/images/header/sofa-bubble-logo.svg" class="logo" alt="Логотип компании sofa bubble">
       </div>
@@ -33,7 +55,7 @@
           <a href="#telegram" class="social__item social__telegram"></a>
         </div>
 
-        <a rel="stylesheet" href="#button_header" class="button-order">
+        <a rel="stylesheet" href="#button_header" class="button-order button-order--header">
           Заказать
         </a>
       </div>
@@ -60,7 +82,7 @@
       </div>
     </div>
 
-    <div class="container product">
+    <!-- <div class="container product">
       <div class="product__item">
         <div class="product__wrapper">
           <div class="product__image">
@@ -296,9 +318,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="advantages-scheme">
         <h2 class="advantages-scheme__title">
           Преимущества современной бескаркасной мебели
@@ -324,9 +346,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="about about__wrapper">
         <div class="about__image-wrapper">
           <div class="about__image about-image__circle"></div>
@@ -353,11 +375,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </main>
 
-  <footer class="footer footer__wrapper">
+  <!-- <footer class="footer footer__wrapper">
     <div class="container footer__container">
       <div class="logo-wrapper">
         <img src="./assets/images/header/sofa-bubble-logo.svg" class="logo" alt="Логотип компании sofa bubble">
@@ -369,6 +391,7 @@
           <a href="#mail" class="link__mail link__mail--white link__mail--big">test@test.ru</a>
         </div>
 
+        <span class="politika">Политика конфиденциальности</span>
         <span class="rights">© Все права защищены</span>
 
         <div class="social-wrapper social">
@@ -381,9 +404,7 @@
         Заказать
       </a>
     </div>
-  </footer>
-
-
+  </footer> -->
 
   <script src="./js/swiper.js"></script>
   <script src="./js/script.js"></script>
