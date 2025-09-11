@@ -191,11 +191,10 @@ body * {
   left: 15px;
 }
 .offer__text {
+  width: 100%;
   font-size: 47px;
   font-weight: 700;
   line-height: 1.1;
-  /* text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
-    1px 1px 0 white; */
 }
 .offer__button-order {
   margin-top: 40px;
@@ -466,8 +465,9 @@ body * {
 
 .rights,
 .politika {
-  font-size: 11px;
+  font-size: 12px;
   color: #fff;
+  white-space: nowrap;
 }
 
 /* МОБИЛЬНОЕ МЕНЮ */
@@ -488,6 +488,7 @@ body * {
   width: 100%;
   height: 3px;
   background: #000;
+  border-radius: 2px;
   transition: all 0.3s ease;
 }
 
@@ -495,7 +496,7 @@ body * {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 70%;
+  width: 75%;
   height: 100vh;
   background: #fff;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -563,7 +564,7 @@ body * {
   transform: translateX(-50%);
 }
 .politika__mob-menu {
-  bottom: 40px;
+  bottom: 45px;
   color: #000;
 }
 .rights__mob-menu {
@@ -616,6 +617,35 @@ body * {
   }
 }
 
+@media (max-width: 780px) {
+  .logo {
+    width: 122px;
+  }
+  .offer__image-wrapper {
+    top: 31%;
+    left: 52%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  .offer__text-wrapper {
+    text-align: center;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+  }
+  .offer__text {
+    font-size: 32px;
+  }
+  .offer__button-order {
+    margin-top: 25px;
+  }
+  .offer__button-order {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .burger-btn {
     display: flex;
@@ -634,7 +664,149 @@ body * {
     transform: translate(-50%, -50%);
   }
   .logo-wrapper.logo-wrapper__mob-menu {
-    top: 15px;
+    top: 25px;
     transform: translateX(-50%);
   }
+}
+
+@media (max-width: 500px) {
+  .offer {
+    height: 720px;
+  }
+  .offer__image-wrapper {
+    top: 40%;
+    left: 54%;
+  }
+  .offer__text-wrapper {
+    display: flex;
+    top: 4%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* max-width: 390px; */
+    height: 630px;
+    padding: 0 15px;
+  }
+  .offer__text {
+    max-width: 380px;
+  }
+  .offer-image__circle,
+  .about-image__circle {
+    max-width: 270px;
+    max-height: 270px;
+  }
+  .offer-image__sofa,
+  .about-image__sofa {
+    top: -1%;
+    right: 21%;
+    max-width: 335px;
+  }
+  .offer-image__circle {
+    top: 30px;
+    right: 15%;
+  }
+  .offer__text {
+    font-size: 46px;
+    line-height: 1.2;
+  }
+  .offer__button-order {
+    display: inline-block;
+  }
+  .offer__button-order {
+    font-size: 26px;
+  }
+  .button-order {
+    padding: 14px 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .social__item {
+    width: 38px;
+    height: 38px;
+  }
+  .offer__text-wrapper {
+    top: 4%;
+    /* max-width: 380px; */
+    height: 640px;
+    padding: 0 12px;
+  }
+  .offer-image__circle,
+  .about-image__circle {
+    max-width: 225px;
+    max-height: 225px;
+  }
+  .offer-image__circle {
+    top: 65px;
+    /* right: 75px; */
+  }
+  .offer-image__sofa,
+  .about-image__sofa {
+    top: 9%;
+    /* right: 27%; */
+    max-width: 285px;
+  }
+  .offer__button-order {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 390px) {
+  .social__item {
+    width: 32px;
+    height: 32px;
+  }
+  .offer-image__sofa,
+  .about-image__sofa {
+    right: 20%;
+  }
+}
+
+@media (max-width: 360px) {
+  .offer {
+    height: 650px;
+  }
+  .offer__image-wrapper {
+    top: 32%;
+  }
+  .offer__text-wrapper {
+    height: 565px;
+  }
+  .offer__text {
+    font-size: 36px;
+    max-width: 300px;
+  }
+  .offer-image__circle {
+    /* top: 65px; */
+    right: 10%;
+  }
+  .offer-image__sofa,
+  .about-image__sofa {
+    right: 15%;
+  }
+  .offer__button-order {
+    font-size: 20px;
+  }
+  .social__item {
+    width: 28px;
+    height: 28px;
+  }
+  .link__tel__mob-menu,
+  .link__mail__mob-menu {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 345px) {
+  .offer-image__circle {
+    right: 5%;
+  }
+  .offer-image__sofa,
+  .about-image__sofa {
+    right: 10%;
+  }
+}
+
+@media (max-width: 330px) {
 }
