@@ -43,6 +43,25 @@ const swiper6 = new Swiper(".swiper-custom-3-2", {
   },
 });
 
+// JavaScript для смены порядка в блоке PRODUCTS
+function swapElements() {
+  const container = document.querySelector(".product__wrapper--order");
+  const item1 = document.querySelector(".product__info--left");
+  const item2 = document.querySelector(".product__image--right");
+
+  if (window.innerWidth <= 800) {
+    if (container.firstElementChild === item1) {
+      container.insertBefore(item2, item1);
+    }
+  } else {
+    if (container.firstElementChild === item2) {
+      container.insertBefore(item1, item2);
+    }
+  }
+}
+window.addEventListener("load", swapElements);
+window.addEventListener("resize", swapElements);
+
 // МОБИЛЬНОЕ МЕНЮ
 const burgerBtn = document.getElementById("burgerBtn");
 const mobileMenu = document.getElementById("mobileMenu");
