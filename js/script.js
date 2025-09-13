@@ -122,3 +122,5 @@ setMenuHeight();
 // Обновление при ресайзе и ориентации
 window.addEventListener("resize", setMenuHeight);
 window.addEventListener("orientationchange", setMenuHeight);
+
+Fancybox.bind("[data-fancybox]", {});
