@@ -987,7 +987,7 @@ body * {
 
 @media (max-width: 500px) {
   .offer {
-    height: 720px;
+    height: 680px;
   }
   .offer__image-wrapper {
     top: 40%;
@@ -1154,7 +1154,7 @@ body * {
   }
   .offer__text-wrapper {
     top: 4%;
-    height: 640px;
+    height: 600px;
     padding: 0 12px;
   }
   .offer__image-wrapper {
@@ -1222,7 +1222,7 @@ body * {
     left: 51%;
   }
   .advantages-scheme__icon-text--4 {
-    left: 58%;
+    left: 62%;
   }
 }
 
