@@ -1159,10 +1159,14 @@ body * {
     top: 0;
   }
   .header.scrolled {
-    height: 50px;
+    height: 40px;
+    opacity: 0.9;
   }
   .header.scrolled .logo-wrapper img {
-    width: 90px;
+    width: 80px;
+  }
+  .logo-wrapper__mob-menu {
+    display: none;
   }
   .main {
     padding-top: 70px;
