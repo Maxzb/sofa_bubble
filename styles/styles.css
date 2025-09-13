@@ -586,6 +586,7 @@ body * {
   right: -100%;
   width: 75%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: #fff;
   -webkit-box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -656,7 +657,7 @@ body * {
   margin: 0;
 }
 .link__mail__mob-menu {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .politika__mob-menu,

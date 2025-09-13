@@ -105,3 +105,20 @@ document.addEventListener("keydown", (e) => {
     document.body.style.overflow = "";
   }
 });
+
+// Убираем обрезание моб.меню
+// Установка правильной высоты
+function setMenuHeight() {
+  const menu = document.querySelector(".mobile-menu");
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+  menu.style.height = window.innerHeight + "px";
+}
+
+// Инициализация
+setMenuHeight();
+
+// Обновление при ресайзе и ориентации
+window.addEventListener("resize", setMenuHeight);
+window.addEventListener("orientationchange", setMenuHeight);
