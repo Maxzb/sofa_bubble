@@ -434,25 +434,25 @@ body * {
 .advantages-scheme__icon--1 {
   top: 14%;
   right: 53%;
-  background: url("../assets/images/advantages-scheme/icon-1.svg") no-repeat
+  background: url("../assets/images/advantages-scheme/icon-1.png") no-repeat
     center center / contain;
 }
 .advantages-scheme__icon--2 {
   top: 14%;
   right: -64%;
-  background: url("../assets/images/advantages-scheme/icon-2.svg") no-repeat
+  background: url("../assets/images/advantages-scheme/icon-2.png") no-repeat
     center center / contain;
 }
 .advantages-scheme__icon--3 {
   top: 67%;
   right: 72%;
-  background: url("../assets/images/advantages-scheme/icon-3.svg") no-repeat
+  background: url("../assets/images/advantages-scheme/icon-3.png") no-repeat
     center center / contain;
 }
 .advantages-scheme__icon--4 {
   top: 72%;
   right: -59%;
-  background: url("../assets/images/advantages-scheme/icon-4.svg") no-repeat
+  background: url("../assets/images/advantages-scheme/icon-4.png") no-repeat
     center center / contain;
 }
 .advantages-scheme__icon-text {
