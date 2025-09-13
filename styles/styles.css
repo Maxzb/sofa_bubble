@@ -1078,13 +1078,15 @@ body * {
     padding-top: 10%;
   }
   .offer-image__circle {
-    max-width: 270px;
-    max-height: 270px;
-  }
-  .offer-image__sofa,
-  .offer-image__circle {
     top: 30px;
     right: 15%;
+    max-width: 255px;
+    max-height: 255px;
+  }
+  .offer-image__sofa {
+    top: 0;
+    right: 26%;
+    max-width: 310px;
   }
   .offer__button-order {
     display: inline-block;
