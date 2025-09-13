@@ -381,20 +381,20 @@ body * {
     center center / contain;
 }
 .advantages__icon--2-3 {
-  background: url("../assets/images/products/2/product_icon-3.svg") no-repeat
+  background: url("../assets/images/products/2/product_icon-3.png") no-repeat
     center center / contain;
 }
 
 .advantages__icon--3-1 {
-  background: url("../assets/images/products/3/product_icon-1.svg") no-repeat
+  background: url("../assets/images/products/3/product_icon-1.png") no-repeat
     center center / contain;
 }
 .advantages__icon--3-2 {
-  background: url("../assets/images/products/3/product_icon-2.svg") no-repeat
+  background: url("../assets/images/products/3/product_icon-2.png") no-repeat
     center center / contain;
 }
 .advantages__icon--3-3 {
-  background: url("../assets/images/products/3/product_icon-3.svg") no-repeat
+  background: url("../assets/images/products/3/product_icon-3.png") no-repeat
     center center / contain;
 }
 
