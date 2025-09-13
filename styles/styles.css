@@ -65,17 +65,25 @@ body * {
 .header,
 .footer {
   position: relative;
+}
+.header {
   height: 70px;
 }
 .footer {
-  margin-top: 20px;
-  height: 85px;
-}
-.footer__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
   background-color: #000;
+  margin-top: 20px;
+  min-height: 85px;
+  padding: 15px;
 }
 .header__container,
 .footer__container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,6 +93,9 @@ body * {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+.footer__container {
+  padding: 0;
 }
 .logo {
   width: 175px;
@@ -137,6 +148,18 @@ body * {
   margin-left: 10px;
   background: url("../assets/images/header/social/telegram-blue.svg") no-repeat
     100% 100% / contain;
+}
+.social__whatsapp--white {
+  width: 23px;
+  height: 23px;
+  background: url("../assets/images/footer/whatsapp-white.svg") no-repeat 100%
+    100% / contain;
+}
+.social__telegram--white {
+  width: 23px;
+  height: 23px;
+  background: url("../assets/images/footer/telegram-white.svg") no-repeat 100%
+    100% / contain;
 }
 
 .button-order {
@@ -515,7 +538,7 @@ body * {
 }
 .link__tel--big,
 .link__mail--big {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .rights,
@@ -694,6 +717,12 @@ body * {
   .offer__text {
     font-size: 32px;
   }
+  .connect-footer {
+    margin-left: 6%;
+  }
+  .rights {
+    display: none;
+  }
 }
 
 @media (max-width: 950px) {
@@ -748,6 +777,25 @@ body * {
   .offer-image__circle {
     max-width: 330px;
     max-height: 330px;
+  }
+
+  .link__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .connect-footer {
+    justify-content: space-around;
+  }
+  .link__tel--big,
+  .link__mail--big {
+    font-size: 16px;
+  }
+  .link__tel--big {
+    margin-bottom: 5px;
+  }
+  .link__mail--big {
+    margin: 0;
   }
 }
 
@@ -840,7 +888,7 @@ body * {
     display: -ms-flexbox;
     display: flex;
   }
-  .link,
+  .header__link,
   .button-order--header {
     display: none;
   }
@@ -892,6 +940,13 @@ body * {
   }
   .about-info__title {
     font-size: 30px;
+  }
+
+  .footer__logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
   }
 }
 
@@ -982,6 +1037,17 @@ body * {
     right: 58%;
     max-width: 275px;
   }
+  .connect-footer {
+    flex-direction: column;
+    margin: 0;
+  }
+  .link__tel--big,
+  .link__mail--big {
+    font-size: 14px;
+  }
+  .link__footer {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 580px) {
   .advantages-scheme__image-wrapper {
@@ -1009,6 +1075,33 @@ body * {
   }
   .advantages-scheme__icon-text--4 {
     left: 48%;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer__container {
+    flex-direction: column;
+  }
+  .footer__button-order {
+    display: none;
+  }
+  .rights {
+    display: block;
+    position: absolute;
+    bottom: -25px;
+  }
+  .footer__logo {
+    margin-bottom: 30px;
+  }
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+  .link__footer {
+    margin-bottom: 25px;
+  }
+  .link__tel--big {
+    margin-bottom: 10px;
   }
 }
 
@@ -1207,6 +1300,11 @@ body * {
   .social__item {
     width: 38px;
     height: 38px;
+  }
+  .social__whatsapp--white,
+  .social__telegram--white {
+    width: 23px;
+    height: 23px;
   }
   .offer__text-wrapper {
     top: 4%;
