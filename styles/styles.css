@@ -1078,7 +1078,7 @@ body * {
 }
 @media (max-width: 580px) {
   .advantages-scheme__image-wrapper {
-    top: 28%;
+    top: 30%;
   }
   .advantages-scheme__image {
     max-width: 250px;
