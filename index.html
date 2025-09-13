@@ -17,6 +17,39 @@
 </head>
 
 <body>
+  <div class="form-overlay" id="form-overlay">
+    <div class="form-container">
+      <form id="contact-form" class="contact-form">
+        <span class="close">&times;</span>
+        <h2>Хотите оформить заказ?</h2>
+        <p class="form-text">Оставьте ваши данные, чтобы наш менеджер связался с вами для уточнения заказа</p>
+
+
+        <div class="form-group form-group--name">
+          <input type="text" id="name" name="name" required placeholder="Ваше имя...">
+          <span class="error-message" id="name-error"></span>
+        </div>
+
+        <div class="form-group form-group--tel">
+          <input type="tel" id="phone" name="phone" required placeholder="Ваш телефон...">
+          <span class="error-message" id="phone-error"></span>
+        </div>
+
+        <!-- Скрытое поле для защиты от спама -->
+        <div class="honeypot">
+          <label for="website">Не заполняйте это поле:</label>
+          <input type="text" id="website" name="website" tabindex="-1">
+        </div>
+
+        <button type="submit" class="submit-btn">Отправить заявку на консультацию</button>
+
+        <div class="form-message" id="form-message"></div>
+      </form>
+    </div>
+  </div>
+
+
+
   <div class="mobile-menu" id="mobileMenu">
     <div class="logo-wrapper logo-wrapper__mob-menu">
       <img src="./assets/images/header/sofa-bubble-logo.svg" class="logo" alt="Логотип компании sofa bubble">
@@ -56,9 +89,9 @@
           <a href="#telegram" class="social__item social__telegram"></a>
         </div>
 
-        <a rel="stylesheet" href="#button_header" class="button-order button-order--header">
+        <button class="button-order button-order--header open-form-btn">
           Заказать
-        </a>
+        </button>
       </div>
     </div>
   </header>
@@ -77,9 +110,9 @@
           <br>
           в домашнюю жизнь выгодно
         </h1>
-        <a rel="stylesheet" href="#button_offer" class="button-order offer__button-order">
+        <button class="button-order offer__button-order open-form-btn">
           Заказать
-        </a>
+        </button>
       </div>
     </div>
 
@@ -143,9 +176,9 @@
                 <span class="props__item-title">Материал:</span>на выбор
               </div>
 
-              <a rel="stylesheet" href="#button_product" class="button-order product__button-order">
+              <button class="button-order product__button-order open-form-btn">
                 Заказать
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -193,9 +226,9 @@
                 <span class="props__item-title">Материал:</span>на выбор
               </div>
 
-              <a rel="stylesheet" href="#button_product" class="button-order product__button-order">
+              <button class="button-order product__button-order open-form-btn">
                 Заказать
-              </a>
+              </button>
             </div>
           </div>
 
@@ -318,9 +351,10 @@
                 <span class="props__item-title">Материал:</span>на выбор
               </div>
 
-              <a rel="stylesheet" href="#button_product" class="button-order product__button-order">
+
+              <button class="button-order product__button-order open-form-btn">
                 Заказать
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -428,9 +462,10 @@
         </div>
       </div>
 
-      <a rel="stylesheet" href="#button_footer" class="button-order footer__button-order">
+
+      <button class="button-order footer__button-order open-form-btn">
         Заказать
-      </a>
+      </button>
     </div>
   </footer>
 
@@ -439,6 +474,7 @@
   <script src="./js/jquery.js"></script>
   <script src="./js/swiper.js"></script>
   <script src="./js/fancybox4.js"></script>
+  <script src="./js/form.js"></script>
   <script src="./js/script.js"></script>
 
 

@@ -124,3 +124,29 @@ window.addEventListener("resize", setMenuHeight);
 window.addEventListener("orientationchange", setMenuHeight);
 
 Fancybox.bind("[data-fancybox]", {});
+
+// Фикс для IOS
+// Проверяем поддержку aspect-ratio
+function supportsAspectRatio() {
+  return CSS.supports("aspect-ratio", "16/9");
+}
+
+// Если не поддерживается, добавляем padding hack
+if (!supportsAspectRatio()) {
+  document.querySelectorAll(".flex-item").forEach((item) => {
+    item.style.position = "relative";
+    const padding = document.createElement("div");
+    padding.style.paddingTop = "56.25%";
+    item.insertBefore(padding, item.firstChild);
+
+    const img = item.querySelector("img");
+    if (img) {
+      img.style.position = "absolute";
+      img.style.top = "0";
+      img.style.left = "0";
+      img.style.width = "100%";
+      img.style.height = "100%";
+      img.style.objectFit = "cover";
+    }
+  });
+}

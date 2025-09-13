@@ -120,6 +120,7 @@ body * {
 .link__tel,
 .link__mail {
   opacity: 1;
+  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 .link__tel:hover,
@@ -163,14 +164,10 @@ body * {
     100% 100% / contain;
 }
 .social__whatsapp--white {
-  /* width: 23px; */
-  /* height: 23px; */
   background: url("../assets/images/footer/whatsapp-white.svg") no-repeat 100%
     100% / contain;
 }
 .social__telegram--white {
-  /* width: 23px; */
-  /* height: 23px; */
   background: url("../assets/images/footer/telegram-white.svg") no-repeat 100%
     100% / contain;
 }
@@ -179,7 +176,7 @@ body * {
   display: inline-block;
   font-size: 18px;
   color: #fff;
-  padding: 10px 45px;
+  padding: 5px 45px;
   border-radius: 27px;
   background-color: var(--dark-blue);
   width: -webkit-fit-content;
@@ -280,7 +277,7 @@ body * {
   display: inline-block;
   width: 46%;
   vertical-align: top;
-  padding: 15px 15px 15px 20px;
+  padding: 0 15px 15px 20px;
 }
 .product__info--left {
   padding: 6px 15px 15px 0;
@@ -686,16 +683,12 @@ body * {
   color: #000;
 }
 
-ПАНЕЛЬ УПРАВЕЛЕНИЯ FANCYBOX
+/* ПАНЕЛЬ УПРАВЕЛЕНИЯ FANCYBOX */
 /* Скрываем все элементы управления Fancybox 4 */
 .f-carousel__toolbar,
 .f-counter {
   display: none !important;
 }
-
-/* .fancybox__thumbs {
-  display: none !important;
-} */
 
 .f-button {
   display: none !important;
@@ -725,6 +718,164 @@ body * {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
+}
+
+/* Форма */
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 38px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 55px 65px 40px;
+  width: calc(100% - 30px);
+  max-width: 410px;
+  z-index: 1000;
+}
+.form-text {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+.form-group input {
+  width: 100%;
+  padding: 5px 5px 5px 15px;
+  border-radius: 38px;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #f7faff;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  -webkit-box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+.form-group input::-webkit-input-placeholder {
+  color: #999;
+}
+.form-group input::-moz-placeholder {
+  color: #999;
+}
+.form-group input:-ms-input-placeholder {
+  color: #999;
+}
+.form-group input::-ms-input-placeholder {
+  color: #999;
+}
+.form-group input::placeholder {
+  color: #999;
+}
+.form-group--tel {
+  margin-bottom: 45px;
+}
+.form-group--name {
+  margin-bottom: 10px;
+}
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--dark-blue);
+  color: white;
+  border: none;
+  border-radius: 38px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.submit-btn:hover {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+.submit-btn:active {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: lighter;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+.close:hover {
+  color: #000;
+}
+
+/* Валидация */
+.form-group input:invalid {
+  border-color: #ff4757;
+}
+.form-group input:valid {
+  border-color: #2ed573;
+}
+.error-message,
+.form-message.error {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 5px;
+  color: red;
+}
+
+/* Overlay */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.form-overlay.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Скрытое поле для защиты от спама */
+.honeypot {
+  position: absolute;
+  left: -5000px;
 }
 
 @media (max-width: 1180px) {
@@ -856,6 +1007,7 @@ body * {
     flex-direction: row;
   }
   .product__info {
+    padding-top: 15px;
     padding-left: 0;
   }
   .product__image--right {
@@ -1293,6 +1445,23 @@ body * {
   .advantages-scheme__icon-text--4 {
     left: 50%;
   }
+
+  /* Адаптивность формы */
+  .form-container {
+    padding: 30px 20px;
+    border-radius: 10px;
+  }
+  .form-group input {
+    padding: 12px;
+  }
+  .submit-btn {
+    padding: 12px;
+  }
+  .form-text {
+    max-width: 245px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1451,10 +1620,6 @@ body * {
 }
 
 @media (max-width: 390px) {
-  .social__item {
-    /* width: 32px; */
-    /* height: 32px; */
-  }
   .offer-image__sofa {
     right: 20%;
   }
@@ -1509,10 +1674,6 @@ body * {
   .offer-image__sofa {
     right: 15%;
   }
-  .social__item {
-    /* width: 28px; */
-    /* height: 28px; */
-  }
   .link__tel__mob-menu,
   .link__mail__mob-menu {
     font-size: 18px;
@@ -1560,5 +1721,11 @@ body * {
   }
   .advantages-scheme__icon--4 {
     left: 76%;
+  }
+}
+
+@media (max-width: 321px) {
+  .contact-form h2 {
+    font-size: 18px;
   }
 }
