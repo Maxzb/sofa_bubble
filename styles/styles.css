@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Noah";
-  src: url("../assets/fonts/noah-regular.woff2") format("woff2"),
-    url("../assets/fonts/noah-regular.woff") format("woff"),
-    url("../assets/fonts/noah-regular.ttf") format("ttf");
+  src: url("../assets/fonts/Noah-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Noah-Regular.woff") format("woff"),
+    url("../assets/fonts/Noah-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,9 +10,9 @@
 
 @font-face {
   font-family: "Noah";
-  src: url("../assets/fonts/noah-bold.woff2") format("woff2"),
-    url("../assets/fonts/noah-bold.woff") format("woff"),
-    url("../assets/fonts/noah-bold.ttf") format("ttf");
+  src: url("../assets/fonts/Noah-Bold.woff2") format("woff2"),
+    url("../assets/fonts/Noah-Bold.woff") format("woff"),
+    url("../assets/fonts/Noah-Bold.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
