@@ -67,7 +67,12 @@ body * {
   position: relative;
 }
 .header {
+  width: 100%;
   height: 70px;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 .footer {
   display: -webkit-box;
@@ -103,6 +108,8 @@ body * {
 }
 .logo {
   width: 175px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .connect-wrapper {
@@ -1144,6 +1151,21 @@ body * {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+  }
+
+  /* Закрепляем header на мобильных */
+  .header {
+    position: fixed;
+    top: 0;
+  }
+  .header.scrolled {
+    height: 50px;
+  }
+  .header.scrolled .logo-wrapper img {
+    width: 90px;
+  }
+  .main {
+    padding-top: 70px;
   }
 }
 

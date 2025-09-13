@@ -150,3 +150,39 @@ if (!supportsAspectRatio()) {
     }
   });
 }
+
+// Фиксированный Header при скролле в моб.версии
+// Получаем элементы
+const header = document.getElementById("header");
+
+// Порог скролла для срабатывания
+const SCROLL_THRESHOLD = 100;
+
+// Функция для обработки скролла
+function handleScroll() {
+  console.log("handleScroll");
+  const scrollY = window.scrollY;
+
+  if (scrollY > SCROLL_THRESHOLD) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+}
+
+// Оптимизация производительности с requestAnimationFrame
+let ticking = false;
+window.addEventListener("scroll", function () {
+  if (!ticking) {
+    requestAnimationFrame(function () {
+      handleScroll();
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+// Инициализация при загрузке
+document.addEventListener("DOMContentLoaded", function () {
+  handleScroll(); // Проверяем начальную позицию
+});
