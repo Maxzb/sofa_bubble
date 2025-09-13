@@ -141,8 +141,8 @@ body * {
 }
 .social__item {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 23px;
+  height: 23px;
 }
 .social__whatsapp {
   background: url("../assets/images/header/social/whatsapp-blue.svg") no-repeat
@@ -154,14 +154,14 @@ body * {
     100% 100% / contain;
 }
 .social__whatsapp--white {
-  width: 23px;
-  height: 23px;
+  /* width: 23px; */
+  /* height: 23px; */
   background: url("../assets/images/footer/whatsapp-white.svg") no-repeat 100%
     100% / contain;
 }
 .social__telegram--white {
-  width: 23px;
-  height: 23px;
+  /* width: 23px; */
+  /* height: 23px; */
   background: url("../assets/images/footer/telegram-white.svg") no-repeat 100%
     100% / contain;
 }
@@ -724,7 +724,7 @@ body * {
   .connect-footer {
     margin-left: 6%;
   }
-  .rights {
+  .footer__rights {
     display: none;
   }
 }
@@ -1128,7 +1128,7 @@ body * {
   .link__tel--big {
     margin-bottom: 10px;
   }
-  .rights {
+  .footer__rights {
     display: block;
     position: absolute;
     bottom: -30px;
@@ -1324,17 +1324,21 @@ body * {
   .advantages__item-text {
     font-size: 16px;
   }
+  .props__header,
+  .props__item {
+    font-size: 16px;
+  }
 
   .about-info__text p {
     font-size: 16px;
-    line-height: 1.1;
+    line-height: 1.3;
   }
 }
 
 @media (max-width: 431px) {
   .social__item {
-    width: 38px;
-    height: 38px;
+    /* width: 38px; */
+    /* height: 38px; */
   }
   .social__whatsapp--white,
   .social__telegram--white {
@@ -1423,8 +1427,8 @@ body * {
 
 @media (max-width: 390px) {
   .social__item {
-    width: 32px;
-    height: 32px;
+    /* width: 32px; */
+    /* height: 32px; */
   }
   .offer-image__sofa {
     right: 20%;
@@ -1481,8 +1485,8 @@ body * {
     right: 15%;
   }
   .social__item {
-    width: 28px;
-    height: 28px;
+    /* width: 28px; */
+    /* height: 28px; */
   }
   .link__tel__mob-menu,
   .link__mail__mob-menu {
