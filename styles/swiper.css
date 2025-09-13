@@ -768,3 +768,8 @@ button.swiper-pagination-bullet {
   height: 100%;
   object-fit: cover;
 }
+.swiper-slide-item {
+  flex: 1;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}

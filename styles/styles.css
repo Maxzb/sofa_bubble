@@ -688,7 +688,8 @@ body * {
 
 ПАНЕЛЬ УПРАВЕЛЕНИЯ FANCYBOX
 /* Скрываем все элементы управления Fancybox 4 */
-.f-carousel__toolbar {
+.f-carousel__toolbar,
+.f-counter {
   display: none !important;
 }
 
@@ -1159,7 +1160,7 @@ body * {
   .footer__rights {
     display: block;
     position: absolute;
-    bottom: -30px;
+    bottom: -35px;
   }
 }
 
