@@ -70,7 +70,11 @@ body * {
   height: 70px;
 }
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
   width: 100%;
@@ -780,11 +784,19 @@ body * {
   }
 
   .link__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .connect-footer {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
   .link__tel--big,
@@ -875,6 +887,8 @@ body * {
     max-width: 280px;
   }
   .about {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .about__image-wrapper {
@@ -946,6 +960,8 @@ body * {
     position: relative;
     top: 0;
     left: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
 }
@@ -1022,6 +1038,9 @@ body * {
 
 @media (max-width: 600px) {
   .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     margin-top: 95px;
   }
@@ -1031,13 +1050,21 @@ body * {
   .about-image__circle,
   .about-image__sofa {
     right: 47%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
     transform: translateX(50%);
   }
   .about-image__sofa {
     right: 58%;
     max-width: 275px;
   }
+  .about-info {
+    padding: 0;
+  }
   .connect-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 0;
   }
@@ -1080,28 +1107,31 @@ body * {
 
 @media (max-width: 540px) {
   .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .footer__button-order {
     display: none;
-  }
-  .rights {
-    display: block;
-    position: absolute;
-    bottom: -25px;
   }
   .footer__logo {
     margin-bottom: 30px;
   }
   .footer {
     padding-top: 30px;
-    padding-bottom: 45px;
+    padding-bottom: 50px;
   }
   .link__footer {
     margin-bottom: 25px;
   }
   .link__tel--big {
     margin-bottom: 10px;
+  }
+  .rights {
+    display: block;
+    position: absolute;
+    bottom: -30px;
   }
 }
 
@@ -1294,6 +1324,11 @@ body * {
   .advantages__item-text {
     font-size: 16px;
   }
+
+  .about-info__text p {
+    font-size: 16px;
+    line-height: 1.1;
+  }
 }
 
 @media (max-width: 431px) {
@@ -1327,6 +1362,11 @@ body * {
   }
   .about-image__circle {
     right: 42%;
+  }
+
+  .link__tel--big,
+  .link__mail--big {
+    font-size: 16px;
   }
 }
 
