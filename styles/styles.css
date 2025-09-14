@@ -671,6 +671,10 @@ body * {
   margin-top: 20px;
 }
 
+.privacy__link {
+  text-decoration: underline;
+  white-space: nowrap;
+}
 .privacy__mob-menu,
 .rights__mob-menu {
   position: absolute;
@@ -680,8 +684,10 @@ body * {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  white-space: nowrap;
 }
 .privacy__mob-menu {
+  font-size: 14px;
   bottom: 45px;
   color: #000;
 }
@@ -695,8 +701,6 @@ body * {
   font-weight: 400;
   color: grey;
   margin-top: 15px;
-  text-decoration: underline;
-  white-space: nowrap;
 }
 .rights__mob-menu {
   color: #000;
