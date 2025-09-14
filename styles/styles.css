@@ -557,8 +557,7 @@ body * {
   font-size: 20px;
 }
 
-.rights,
-.privacy {
+.rights {
   font-size: 12px;
   color: #fff;
   white-space: nowrap;
