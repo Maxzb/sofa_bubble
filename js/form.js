@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((error) => {
         showMessage(
-          "Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.",
+          "Произошла ошибка при отправке формы.Пожалуйста, попробуйте еще раз.",
           "error"
         );
         console.error("Ошибка:", error);

@@ -558,7 +558,7 @@ body * {
 }
 
 .rights,
-.politika {
+.privacy {
   font-size: 12px;
   color: #fff;
   white-space: nowrap;
@@ -672,7 +672,7 @@ body * {
   margin-top: 20px;
 }
 
-.politika__mob-menu,
+.privacy__mob-menu,
 .rights__mob-menu {
   position: absolute;
   bottom: 20px;
@@ -682,9 +682,22 @@ body * {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.politika__mob-menu {
+.privacy__mob-menu {
   bottom: 45px;
   color: #000;
+}
+
+.form__privacy-wrapper {
+  text-align: center;
+}
+.privacy__form {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  color: grey;
+  margin-top: 15px;
+  text-decoration: underline;
+  white-space: nowrap;
 }
 .rights__mob-menu {
   color: #000;
@@ -808,7 +821,7 @@ body * {
   color: white;
   border: none;
   border-radius: 38px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
@@ -883,6 +896,31 @@ body * {
 .honeypot {
   position: absolute;
   left: -5000px;
+}
+
+/* Политика конфиденцильности */
+.privacy {
+  padding-top: 70px;
+}
+.page-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-top: 25px;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+.privacy h2 {
+  font-size: 16px;
+  color: #fafafa;
+}
+.privacy .ol {
+  padding: 10px 0 10px 15px;
+}
+.privacy a {
+  color: var(--dark-blue);
 }
 
 @media (max-width: 1180px) {
