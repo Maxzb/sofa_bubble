@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "Noah";
   src: url("../assets/fonts/Noah-Regular.woff2") format("woff2"),
@@ -71,6 +78,7 @@ body * {
   height: 70px;
   background-color: #fff;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 1000;
 }
@@ -109,6 +117,7 @@ body * {
 .logo {
   width: 175px;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -128,6 +137,7 @@ body * {
 .link__mail {
   opacity: 1;
   -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 .link__tel:hover,
@@ -340,6 +350,7 @@ body * {
   display: flex;
 }
 .advantages--left {
+  -ms-grid-column-align: start;
   justify-self: start;
   left: 0;
   -webkit-box-orient: horizontal;
@@ -544,6 +555,7 @@ body * {
   -ms-flex: 1 0 52%;
   flex: 1 0 52%;
   -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
   align-self: start;
   font-weight: 700;
   font-size: 31px;
@@ -602,6 +614,7 @@ body * {
   background: #000;
   border-radius: 2px;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -616,6 +629,7 @@ body * {
   -webkit-box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   -webkit-transition: right 0.3s ease;
+  -o-transition: right 0.3s ease;
   transition: right 0.3s ease;
   z-index: 1000;
   padding: 120px 20px 20px;
@@ -635,6 +649,7 @@ body * {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 999;
 }
@@ -801,6 +816,7 @@ body * {
   border-radius: 38px;
   font-size: 14px;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background-color: #f7faff;
 }
@@ -842,6 +858,7 @@ body * {
   font-weight: 600;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .submit-btn:hover {
@@ -1062,6 +1079,7 @@ body * {
     width: 100%;
   }
   .advantages--left {
+    -ms-grid-column-align: end;
     justify-self: end;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
