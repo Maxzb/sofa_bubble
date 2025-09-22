@@ -43,24 +43,55 @@ const swiper6 = new Swiper(".swiper-custom-3-2", {
   },
 });
 
+const swiper7 = new Swiper(".swiper-custom-4-1", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+const swiper8 = new Swiper(".swiper-custom-4-2", {
+  loop: true,
+  spaceBetween: 10,
+  thumbs: {
+    swiper: swiper7,
+  },
+});
+
 // JavaScript для смены порядка в блоке PRODUCTS
 function swapElements() {
-  const container = document.querySelector(".product__wrapper--order");
-  const item1 = document.querySelector(".product__info--left");
-  const item2 = document.querySelector(".product__image--right");
+  const containers = document.querySelectorAll(".product__wrapper--order");
 
-  if (window.innerWidth <= 800) {
-    if (container.firstElementChild === item1) {
-      container.insertBefore(item2, item1);
+  containers.forEach((container, index) => {
+    const item1 = container.querySelector(".product__info--left");
+    const item2 = container.querySelector(".product__image--right");
+
+    if (!item1 || !item2) {
+      console.warn("Элементы не найдены в контейнере", index);
+      return;
     }
-  } else {
-    if (container.firstElementChild === item2) {
-      container.insertBefore(item1, item2);
+
+    if (window.innerWidth <= 800) {
+      if (container.firstElementChild === item1) {
+        container.insertBefore(item2, item1);
+      }
+    } else {
+      if (container.firstElementChild === item2) {
+        container.insertBefore(item1, item2);
+      }
     }
-  }
+  });
 }
+
+// Дебаунс для оптимизации resize событий
+let resizeTimeout;
+function debouncedSwap() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(swapElements, 250);
+}
+
 window.addEventListener("load", swapElements);
-window.addEventListener("resize", swapElements);
+window.addEventListener("resize", debouncedSwap);
 
 // МОБИЛЬНОЕ МЕНЮ
 const burgerBtn = document.getElementById("burgerBtn");
@@ -160,7 +191,6 @@ const SCROLL_THRESHOLD = 100;
 
 // Функция для обработки скролла
 function handleScroll() {
-  console.log("handleScroll");
   const scrollY = window.scrollY;
 
   if (scrollY > SCROLL_THRESHOLD) {
