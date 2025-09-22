@@ -269,7 +269,7 @@ body * {
 }
 .product__item {
   position: relative;
-  height: 685px;
+  height: 750px;
   margin-bottom: 100px;
 }
 .product__image {
@@ -1055,7 +1055,7 @@ body * {
 
 @media (max-width: 800px) {
   .product__item {
-    height: 1000px;
+    height: 1070px;
   }
   .product__image,
   .product__info {
@@ -1483,7 +1483,6 @@ body * {
     width: 100%;
   }
   .product__item {
-    height: 1030px;
     margin-bottom: 100px;
   }
   .product__info {
@@ -1581,7 +1580,8 @@ body * {
     height: auto;
   }
   .product__item {
-    height: 1380px;
+    /* height: 1500px; */
+    height: 100%;
   }
   .advantages__item {
     max-width: 100%;
@@ -1790,9 +1790,6 @@ body * {
 }
 
 @media (max-width: 335px) {
-  .product__item {
-    height: 1400px;
-  }
   .advantages-scheme__icon-text {
     font-size: 10px;
     max-width: 80px;
