@@ -52,7 +52,8 @@
           консультацию</button>
 
         <div class="form__privacy-wrapper">
-          <a href="https://maxzb.github.io/sofa_bubble/privacy" class="privacy__link privacy__form">Политика
+          <a href="https://maxzb.github.io/sofa_bubble/privacy" class="privacy__link privacy__form"
+            aria-label="Ссылка на Политику конфиденциальности компании">Политика
             конфиденциальности</a>
         </div>
 
@@ -68,12 +69,22 @@
       <img src="./assets/images/header/sofa-bubble-logo.svg" class="logo" alt="Логотип компании sofa bubble">
     </div>
 
-    <div class="link-wrapper link__mob-menu">
-      <a href="#tel" class="link__tel link__tel__mob-menu">8-800-999-99-99</a>
-      <a href="#mail" class="link__mail link__mail__mob-menu">test@test.ru</a>
+    <div class="link-wrapper link__mob-menu-wrap">
+      <div class="link-wrapper__links-wrap">
+        <a href="#armchaits" class="link__mob-menu" aria-label="Ссылка на раздел кресла">Кресла</a>
+        <a href="#sofas" class="link__mob-menu" aria-label="Ссылка на раздел диваны">Диваны</a>
+        <a href="#design_armchairs" class="link__mob-menu"
+          aria-label="Ссылка на раздел дизайнерские кресла">Дизайнерские кресла</a>
+        <a href="#poufs" class="link__mob-menu" aria-label="Ссылка на раздел пуфы">Пуфы</a>
+        <a href="#company" class="link__mob-menu" aria-label="Ссылка на раздел о компании">О компании</a>
+      </div>
+      <a href="#tel" class="link__mob-menu link__mob-menu--blue" aria-label="Ссылка на телефон">8-800-999-99-99</a>
+      <a href="#mail" class="link__mob-menu link__mob-menu--blue"
+        aria-label="Ссылка на электронную почту">test@test.ru</a>
     </div>
 
-    <a href="https://maxzb.github.io/sofa_bubble/privacy" class="privacy__link privacy__mob-menu">Политика
+    <a href="https://maxzb.github.io/sofa_bubble/privacy" class="privacy__link privacy__mob-menu"
+      aria-label="Ссылка на Политику конфиденциальности компании">Политика
       конфиденциальности</a>
     <span class="rights rights__mob-menu">© Все права защищены</span>
   </div>
@@ -131,7 +142,7 @@
     </div>
 
     <div class="container product">
-      <div class="product__item">
+      <div class="product__item anchor-target" id="armchaits">
         <div class="product__wrapper">
           <div class="product__image">
             <div class="swiper mySwiper2 swiper-custom-1-2">
@@ -233,7 +244,7 @@
         </div>
       </div>
 
-      <div class="product__item">
+      <div class="product__item anchor-target" id="sofas">
         <div class="product__wrapper product__wrapper--order">
           <div class="product__info product__info--left">
             <div class="product__title">Диван Bubble</div>
@@ -332,7 +343,7 @@
         </div>
       </div>
 
-      <div class="product__item">
+      <div class="product__item anchor-target" id="design_armchairs">
         <div class="product__wrapper">
           <div class="product__image">
             <div class="swiper mySwiper2 swiper-custom-3-2">
@@ -439,7 +450,7 @@
         </div>
       </div>
 
-      <div class="product__item">
+      <div class="product__item anchor-target" id="poufs">
         <div class="product__wrapper product__wrapper--order">
           <div class="product__info product__info--left">
             <div class="product__title">Пуф Bubble</div>
@@ -566,7 +577,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container anchor-target" id="company" anchor-target>
       <div class="about about__wrapper">
         <div class="about__image-wrapper">
           <div class="about__image about-image__circle"></div>

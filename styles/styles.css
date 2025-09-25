@@ -43,6 +43,10 @@
   --container-max-width: 1200px;
 }
 
+.anchor-target {
+  scroll-margin-top: 100px;
+}
+
 body * {
   font-family: "Noah", sans-serif;
   font-size: var(--primary-font-size);
@@ -150,7 +154,7 @@ body * {
 }
 
 .link,
-.link__mob-menu {
+.link__mob-menu-wrap {
   white-space: nowrap;
   margin-right: 11%;
 }
@@ -667,7 +671,7 @@ body * {
   -ms-transform: rotate(-45deg) translate(7px, -8px);
   transform: rotate(-45deg) translate(7px, -8px);
 }
-.link__mob-menu {
+.link__mob-menu-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -683,16 +687,21 @@ body * {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.link__tel__mob-menu,
-.link__mail__mob-menu {
+.link-wrapper__links-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+.link__mob-menu {
   display: inline-block;
   font-size: 20px;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
-.link__mail__mob-menu {
-  margin-top: 20px;
+.link__mob-menu--blue {
+  color: var(--dark-blue);
 }
-
 .privacy__link {
   text-decoration: underline;
   white-space: nowrap;
@@ -1766,8 +1775,7 @@ body * {
   .offer-image__sofa {
     right: 15%;
   }
-  .link__tel__mob-menu,
-  .link__mail__mob-menu {
+  .link__mob-menu {
     font-size: 18px;
   }
 
