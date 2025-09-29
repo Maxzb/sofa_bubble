@@ -58,6 +58,21 @@ const swiper8 = new Swiper(".swiper-custom-4-2", {
   },
 });
 
+const swiper9 = new Swiper(".swiper-custom-5-1", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+const swiper10 = new Swiper(".swiper-custom-5-2", {
+  loop: true,
+  spaceBetween: 10,
+  thumbs: {
+    swiper: swiper9,
+  },
+});
+
 // JavaScript для смены порядка в блоке PRODUCTS
 function swapElements() {
   const containers = document.querySelectorAll(".product__wrapper--order");
