@@ -618,6 +618,7 @@ body * {
 }
 
 .mobile-menu {
+  display: none;
   position: fixed;
   top: 0;
   right: -100%;
@@ -1178,6 +1179,9 @@ s .privacy__link {
 }
 
 @media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
   .burger-btn {
     display: -webkit-box;
     display: -ms-flexbox;
