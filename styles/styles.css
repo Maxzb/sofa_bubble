@@ -352,7 +352,6 @@ body * {
   -ms-grid-column-align: start;
   justify-self: start;
   left: 0;
-  /* margin-right: auto; */
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
