@@ -276,15 +276,15 @@ body * {
 }
 .product__item {
   position: relative;
-  height: 770px;
-  margin-bottom: 100px;
+  height: 100%;
+  padding-bottom: 100px;
 }
 .product__image {
   display: inline-block;
   width: 52%;
 }
 .product__image--right {
-  position: absolute;
+  position: relative;
   right: 0;
 }
 .product__info {
@@ -340,17 +340,19 @@ body * {
 }
 
 .advantages {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  max-width: 80%;
+  margin-top: 200px;
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .advantages--left {
+  margin-left: 0;
   -ms-grid-column-align: start;
   justify-self: start;
   left: 0;
+  /* margin-right: auto; */
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
@@ -989,6 +991,9 @@ s .privacy__link {
     max-width: 370px;
     max-height: 370px;
   }
+  .advantages {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1040,6 +1045,9 @@ s .privacy__link {
     width: 180px;
     height: 180px;
   }
+  .advantages {
+    margin-top: 160px;
+  }
 }
 
 @media (max-width: 850px) {
@@ -1086,16 +1094,17 @@ s .privacy__link {
 }
 
 @media (max-width: 800px) {
-  .product__item {
-    height: 1070px;
-  }
   .product__image,
   .product__info {
     width: 100%;
   }
+  .advantages {
+    max-width: 100%;
+    margin-top: 100px;
+    margin-left: 0;
+  }
   .advantages--left {
-    -ms-grid-column-align: end;
-    justify-self: end;
+    justify-self: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -1104,9 +1113,6 @@ s .privacy__link {
   .product__info {
     padding-top: 15px;
     padding-left: 0;
-  }
-  .product__image--right {
-    position: relative;
   }
   .advantages__item:last-child {
     margin-right: 0;
@@ -1283,6 +1289,7 @@ s .privacy__link {
 
 @media (max-width: 650px) {
   .advantages {
+    margin-top: 150px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
@@ -1515,9 +1522,6 @@ s .privacy__link {
     padding: 14px 0;
     width: 100%;
   }
-  .product__item {
-    margin-bottom: 100px;
-  }
   .product__info {
     padding-right: 0;
   }
@@ -1581,7 +1585,7 @@ s .privacy__link {
   .advantages {
     position: relative;
     width: 100%;
-    padding-top: 120px;
+    margin-top: 140px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1611,10 +1615,6 @@ s .privacy__link {
   }
   .product__wrapper {
     height: auto;
-  }
-  .product__item {
-    /* height: 1500px; */
-    height: 100%;
   }
   .props__item-title {
     font-size: 16px;
