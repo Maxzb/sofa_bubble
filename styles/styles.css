@@ -1816,6 +1816,9 @@ s .privacy__link {
   .offer-image__sofa {
     right: 10%;
   }
+  .mobile-menu {
+    padding-top: 100px;
+  }
 }
 
 @media (max-width: 335px) {
