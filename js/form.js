@@ -1,28 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const formContainer = document.getElementById("form-container");
+  const contactForm = document.getElementById("contact-form");
+  const formContainerSuccess = document.getElementById(
+    "form-container--success"
+  );
+  const formContainerError = document.getElementById("form-container--error");
+  const formMessageSuccess = document.getElementById("form-message--success");
+  const formMessageError = document.getElementById("form-message--error");
   const overlay = document.getElementById("form-overlay");
-  const form = document.getElementById("contact-form");
   const openFormBtns = document.querySelectorAll(".open-form-btn");
-  const closeBtn = document.querySelector(".close");
-  const formMessage = document.getElementById("form-message");
+  const closeBtns = document.querySelectorAll(".close");
 
   // Открытие формы
   openFormBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
       overlay.classList.add("active");
       document.body.style.overflow = "hidden"; // Блокируем скролл
+      formContainer.style.display = "block";
     });
   });
 
   function resetForm() {
-    form.reset();
+    contactForm.reset();
     hideErrorMessages();
-    formMessage.className = "form-message";
-    formMessage.style.display = "none";
+
+    if (
+      !!formContainerSuccess &&
+      formContainerSuccess.style.display === "block"
+    ) {
+      formContainerSuccess.style.display = "none";
+      formMessageSuccess.className = "form-message";
+      formMessageSuccess.style.display = "none";
+    }
+
+    if (!!formContainerError && formContainerError.style.display === "block") {
+      formContainerError.style.display = "none";
+      formMessageError.className = "form-message";
+      formMessageError.style.display = "none";
+    }
   }
 
   function closeForm() {
+    console.timeLog("closeForm");
     overlay.classList.remove("active");
-    document.body.style.overflow = ""; // Разблокируем скролл
+    document.body.style.overflow = "auto"; // Разблокируем скролл
     resetForm();
   }
 
@@ -34,7 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Закрытие формы по кнопке
-  closeBtn.addEventListener("click", closeForm);
+  closeBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      closeForm();
+    });
+  });
 
   // Закрытие формы по ESC
   document.addEventListener("keydown", function (e) {
@@ -48,15 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
       el.style.display = "none";
     });
   }
-
-  // Валидация формы
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    if (validateForm() && !isSpam()) {
-      submitForm();
-    }
-  });
 
   function validateForm() {
     let isValid = true;
@@ -97,51 +113,56 @@ document.addEventListener("DOMContentLoaded", function () {
     return honeypot.value !== "";
   }
 
-  // Отправка формы
+  // Валидация формы
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (validateForm() && !isSpam()) {
+      submitForm();
+    }
+  });
+
   function submitForm() {
-    const submitBtn = form.querySelector(".submit-btn");
-    const formData = new FormData(form);
-
-    // Блокируем кнопку отправки
-    submitBtn.disabled = true;
+    // Показываем loading state
+    const submitBtn = contactForm.querySelector(".submit-btn");
+    const originalText = submitBtn.textContent;
     submitBtn.textContent = "Отправка...";
+    submitBtn.disabled = true;
 
-    // Отправка данных на сервер
+    // Собираем данные формы
+    const formData = new FormData(contactForm);
+
+    // Отправляем AJAX запрос
     fetch("send_email.php", {
       method: "POST",
       body: formData,
     })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Ошибка сети");
-        }
-        return response.text();
-      })
+      .then((response) => response.json())
       .then((data) => {
-        showMessage(data, "success");
-
-        // Очищаем форму через 3 секунды
-        setTimeout(function () {
-          closeForm();
-        }, 3000);
+        if (data.success) {
+          formContainerSuccess.style.display = "block";
+          formMessageSuccess.textContent = data.message;
+          formMessageSuccess.className = "form-message success";
+          contactForm.reset();
+        } else {
+          formContainerError.style.display = "block";
+          formMessageError.textContent = data.message;
+          formMessageError.className = "form-message error";
+          contactForm.reset();
+        }
       })
       .catch((error) => {
-        showMessage(
-          "Произошла ошибка при отправке формы.Пожалуйста, попробуйте еще раз.",
-          "error"
-        );
-        console.error("Ошибка:", error);
+        formContainerError.style.display = "block";
+        formMessageError.textContent = "Произошла ошибка при отправке формы";
+        formMessageError.className = "form-message error";
+        contactForm.reset();
+
+        console.error("Error:", error);
       })
       .finally(() => {
-        // Разблокируем кнопку
+        formContainer.style.display = "none";
+        submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-        submitBtn.textContent = "Отправить";
       });
-  }
-
-  function showMessage(message, type) {
-    formMessage.textContent = message;
-    formMessage.className = "form-message " + type;
-    formMessage.style.display = "block";
   }
 });

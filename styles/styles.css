@@ -691,9 +691,18 @@ body * {
   justify-content: space-between;
 }
 .link-wrapper__links-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 35px;
 }
@@ -803,10 +812,18 @@ s .privacy__link {
   max-width: 410px;
   z-index: 1000;
 }
-.form-text {
+.form-container--success,
+.form-container--error {
+  padding: 55px 40px 40px;
+}
+.form-text,
+.form-message,
+#form-message--success,
+#form-message--error {
   font-size: 14px;
   text-align: center;
   margin-bottom: 40px;
+  color: #333;
 }
 .contact-form h2 {
   text-align: center;
@@ -814,6 +831,20 @@ s .privacy__link {
   color: #333;
   font-size: 24px;
   font-weight: 700;
+}
+.contact-form--success,
+.contact-form--error {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .form-group {
   margin-bottom: 20px;
@@ -899,6 +930,12 @@ s .privacy__link {
 }
 .close:hover {
   color: #000;
+}
+
+.form-container--success,
+.form-container--error {
+  display: none;
+  height: 377px;
 }
 
 /* Валидация */
@@ -1104,6 +1141,7 @@ s .privacy__link {
     margin-left: 0;
   }
   .advantages--left {
+    -ms-grid-column-align: auto;
     justify-self: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

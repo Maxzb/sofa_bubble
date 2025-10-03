@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="App Name">
   <meta name="format-detection" content="telephone=no">
@@ -13,12 +12,12 @@
   <meta name="keywords"
     content="диваны, кресла, пуфы, заказать диван, заказать кресло, заказать пуф, покупка дивана, покупка кресла, покупка пуфа, диваны bubble, кресла bubble, пуфы bubble, купить диван, купить кресло, купить пуф">
 
-  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Sofashop" />
-  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Sofashop">
+  <link rel="manifest" href="/favicon/site.webmanifest">
 
   <link rel="stylesheet" href="./styles/swiper.css">
   <link rel="stylesheet" href="./styles/fancybox4.css">
@@ -29,7 +28,7 @@
 
 <body>
   <div class="form-overlay" id="form-overlay">
-    <div class="form-container">
+    <div class="form-container" id="form-container">
       <form id="contact-form" class="contact-form" action="send_email.php" method="POST">
         <span class="close">&times;</span>
         <h2>Хотите оформить заказ?</h2>
@@ -59,9 +58,25 @@
           <a href="https://sofashop.ru/privacy.html" class="privacy__link privacy__form"
             aria-label="Ссылка на Политику конфиденциальности компании">Политика конфиденциальности</a>
         </div>
-
-        <div class="form-message" id="form-message"></div>
       </form>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="form-container form-container--success" id="form-container--success">
+      <div class="contact-form contact-form--success">
+        <span class="close">&times;</span>
+        <h2>Спасибо!</h2>
+        <div class="form-message" id="form-message--success"></div>
+      </div>
+    </div>
+
+    <!-- ERROR MODAL -->
+    <div class="form-container form-container--error" id="form-container--error">
+      <div class="contact-form contact-form--error">
+        <span class="close">&times;</span>
+        <h2>Ошибка!</h2>
+        <div class="form-message" id="form-message--error"></div>
+      </div>
     </div>
   </div>
 
@@ -196,8 +211,10 @@
           </div>
           <div class="product__info">
             <div class="product__title">Кресло Bubble</div>
-            <p class="product__text">Дизайнерское минималистичное кресло Bubble, воплощение идеи итальянского дизайнера
-              Rodolfo Dordoni, в двух размерах 120x100х70см и 131x108x80см, изготовлено из высококачественного латекса,
+            <p class="product__text">Дизайнерское минималистичное кресло Bubble, воплощение идеи итальянского
+              дизайнера
+              Rodolfo Dordoni, в двух размерах 120x100х70см и 131x108x80см, изготовлено из высококачественного
+              латекса,
               обладающего высокой эластичностью, эргономичностью, прочностью, не деформируется и не теряет форму, что
               значительно продлевает срок эксплуатации. Высокопрочная сетчатая ткань обивки придает изящный стиль и
               оригинальность. Кресло Bubble будет отличным дополнением к Вашему интерьеру и интересным дизайнерским
@@ -209,7 +226,8 @@
               </div>
 
               <div class="props__item">
-                <span class="props__item-title">Материал:</span>ткань Techno 3D. Материал отличается особой прочностью и
+                <span class="props__item-title">Материал:</span>ткань Techno 3D. Материал отличается особой прочностью
+                и
                 растяжимостью во всех направлениях, так как его структура состоит из ячеек, напоминающих соты.
               </div>
 
@@ -272,7 +290,8 @@
               </div>
 
               <div class="props__item">
-                <span class="props__item-title">Материал:</span>ткань Techno 3D. Материал отличается особой прочностью и
+                <span class="props__item-title">Материал:</span>ткань Techno 3D. Материал отличается особой прочностью
+                и
                 растяжимостью во всех направлениях, так как его структура состоит из ячеек, напоминающих соты.
               </div>
 
@@ -414,7 +433,8 @@
             <div class="product__title">Дизайнерское кресло Serie&nbsp;Up&nbsp;Mix</div>
             <p class="product__text">Дизайнерское кресло Serie Up Mix послужит настоящим арт-объектом для интерьера
               Вашего дома. Благодаря продуманным пропорциями и насыщенной цветовой гамме, кресло станет центром
-              притяжения, вне зависимости от стиля помещения. Достаточно массивные габариты 120x102x92см см подчеркивают
+              притяжения, вне зависимости от стиля помещения. Достаточно массивные габариты 120x102x92см см
+              подчеркивают
               прочность и устойчивость, создают комфорт, функциональность и полное расслабление.
               Создайте оригинальный акцент и стиль в Вашем доме и подчеркните свой изысканный вкус с помощью кресла
               Serie Up Mix.</p>
@@ -469,10 +489,12 @@
         <div class="product__wrapper product__wrapper--order">
           <div class="product__info product__info--left">
             <div class="product__title">Диван Universal</div>
-            <p class="product__text">Дизайнерский секционный диван Universal изготовлен из высококачественного латекса,
+            <p class="product__text">Дизайнерский секционный диван Universal изготовлен из высококачественного
+              латекса,
               обладающего высокой эластичностью, эргономичностью, прочностью, не деформируется и не теряет форму, что
               значительно продлевает срок эксплуатации. Высокопрочная ткань обивки придает изящный стиль и
-              оригинальность. Двухместный или трехместный диван станет лучшим дизайнерским решением для Вашего дома.</p>
+              оригинальность. Двухместный или трехместный диван станет лучшим дизайнерским решением для Вашего дома.
+            </p>
             <div class="div product__props props">
               <span class="props__header">Характеристики</span>
               <div class="props__item">
@@ -614,7 +636,8 @@
             <p class="product__text">Дизайнерский минималистичный пуф для ног в размере 80cmx36cm станет отличным
               дополнением к креслу или дивану серии Bubble, изготовлен из высококачественного латекса, обладающего
               высокой эластичностью, эргономичностью, прочностью, не деформируется и не теряет форму, что значительно
-              продлевает срок эксплуатации. Высокопрочная сетчатая ткань обивки придает изящный стиль и оригинальность.
+              продлевает срок эксплуатации. Высокопрочная сетчатая ткань обивки придает изящный стиль и
+              оригинальность.
             </p>
             <div class="div product__props props">
               <span class="props__header">Характеристики</span>
@@ -692,7 +715,7 @@
       </div>
     </div>
 
-    <div class="container anchor-target" id="company" anchor-target>
+    <div class="container anchor-target" id="company">
       <div class="about about__wrapper">
         <div class="about__image-wrapper">
           <div class="about__image about-image__circle"></div>
