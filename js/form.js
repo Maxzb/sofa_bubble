@@ -141,11 +141,13 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         if (data.success) {
           formContainerSuccess.style.display = "block";
+          formMessageSuccess.style.display = "block";
           formMessageSuccess.textContent = data.message;
           formMessageSuccess.className = "form-message success";
           contactForm.reset();
         } else {
           formContainerError.style.display = "block";
+          formMessageError.style.display = "block";
           formMessageError.textContent = data.message;
           formMessageError.className = "form-message error";
           contactForm.reset();
@@ -153,7 +155,9 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((error) => {
         formContainerError.style.display = "block";
-        formMessageError.textContent = "Произошла ошибка при отправке формы";
+        formMessageError.style.display = "block";
+        formMessageError.textContent =
+          "Произошла ошибка при отправке формы! Пожалуйста, попробуйте позже.";
         formMessageError.className = "form-message error";
         contactForm.reset();
 
