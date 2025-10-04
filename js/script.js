@@ -73,6 +73,21 @@ const swiper10 = new Swiper(".swiper-custom-5-2", {
   },
 });
 
+const swiper11 = new Swiper(".swiper-custom-6-1", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+const swiper12 = new Swiper(".swiper-custom-6-2", {
+  loop: true,
+  spaceBetween: 10,
+  thumbs: {
+    swiper: swiper11,
+  },
+});
+
 // JavaScript для смены порядка в блоке PRODUCTS
 function swapElements() {
   const containers = document.querySelectorAll(".product__wrapper--order");
