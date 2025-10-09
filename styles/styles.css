@@ -163,6 +163,9 @@ body * {
   white-space: nowrap;
   margin-right: 30px;
 }
+.social-privacy {
+  margin-right: 0;
+}
 .social__item {
   display: inline-block;
   width: 23px;
