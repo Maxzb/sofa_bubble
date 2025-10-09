@@ -704,7 +704,6 @@ body * {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 35px;
 }
 .link-wrapper__links-wrap:last-child {
   margin-bottom: 55px;
@@ -1864,7 +1863,7 @@ s .privacy__link {
     right: 10%;
   }
   .mobile-menu {
-    padding-top: 100px;
+    padding-top: 70px;
   }
 }
 
